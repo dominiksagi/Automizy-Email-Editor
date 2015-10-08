@@ -1,14 +1,17 @@
 <?php
 
-$translateDir = __DIR__ . '/languages/'; //mo files
-$autoloadPhpFile = __DIR__ . '/.composer/autoload.php';
-$targetDir = __DIR__ . '/src/js/generate/languages/';  //js files
-
-
+$translateDir = __DIR__ . '/../languages/'; //mo files
+$autoloadPhpFile = __DIR__ . '/../.composer/autoload.php';
+$targetDir = __DIR__ . '/../src/js/generate/languages/';  //js files
 
 header('Content-Type: text/html; charset=utf-8');
 
 require_once $autoloadPhpFile;
+
+if(!is_dir($translateDir)) {
+	mkdir($translateDir);
+}
+
 $files = scandir($translateDir);
 $langs = [];
 

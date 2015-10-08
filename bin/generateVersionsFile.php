@@ -1,7 +1,7 @@
 <?php
-$inputDir = "src";
-$outputFile = "src/js/generate/versions.js";
-$lastUpdateTimeOutputFile = "src/js/generate/lastUpdateTime.js";
+$inputDir = "../src";
+$outputFile = "../src/js/generate/versions.js";
+$lastUpdateTimeOutputFile = "../src/js/generate/lastUpdateTime.js";
 
 $prefix = strlen($inputDir);
 $content = "var VERSIONS = {\r\n";
